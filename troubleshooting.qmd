@@ -1,0 +1,28 @@
+---
+title: "Table Scroll Test"
+format:
+  dashboard
+---
+
+```{r setup, include=FALSE}
+library(babynames)
+
+# Make data available for OJS
+ojs_define(my_ojs = babynames)
+```
+
+```{ojs}
+//| output: false
+import { aq, op } from '@uwdata/arquero'
+
+// Arquero
+all_ojs = aq.table(my_ojs)
+```
+
+
+```{ojs}
+
+Inputs.table(all_ojs)
+
+```
+
